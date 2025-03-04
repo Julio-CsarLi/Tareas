@@ -9,12 +9,12 @@ private:
     std::string ReportaA;
 
 public:
-    // Constructor por defecto
+    // Constructor
     empleado() : ClaveEmpleado(0), Nombre(" "), Domicilio(" "), Sueldo(0.0), ReportaA(" ") {}
     empleado(int clave, std::string nombre, std::string domicilio, float sueldo, std::string reporta)
         : ClaveEmpleado(clave), Nombre(nombre), Domicilio(domicilio), Sueldo(sueldo), ReportaA(reporta) {}
 
-    // mostrar la información del empleado
+    // mostrar la informaciÃ³n del empleado
     friend std::ostream& operator<<(std::ostream& o, const empleado& p) {
         o << "Clave del empleado: " << p.ClaveEmpleado << "\n";
         o << "Nombre: " << p.Nombre << "\n";
@@ -39,7 +39,7 @@ public:
         return i;
     }
 
-    //Operador de comparación
+    //Operador de comparaciÃ³n
     bool operator==(const empleado& p) const {
         return (ClaveEmpleado == p.ClaveEmpleado&& Nombre == p.Nombre&& ReportaA == p.ReportaA);
     }
