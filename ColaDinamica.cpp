@@ -66,7 +66,7 @@ public:
         constancias = new constancia[capacidad];  // crear arreglo dinamico inicial con capacidad de 5
     }
 
-    ~Cola() {
+    ~Cola() { // destructor
         delete[] constancias;  // liberar la memoria del arreglo dinamico
     }
 
@@ -166,7 +166,7 @@ int main() {
                 std::cout << "Saliendo del programa...\n";
                 break;
             default:
-                std::cout << "Escribe una opción válida\n";
+                std::cout << "Escribe una opciÃ³n vÃ¡lida\n";
         }
     } while (opcion != 4);
 
